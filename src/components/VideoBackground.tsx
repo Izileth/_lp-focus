@@ -28,24 +28,19 @@ export function VideoBackground({ videoSources, overlayOpacity = 0.4 }: VideoBac
         >
           <div className="absolute inset-0 w-full h-full scale-[1.3] md:scale-[1.1] origin-center">
             <ReactPlayer
-              url={videoSources[currentIndex]}
+              src={videoSources[currentIndex]}
               playing
               muted
-              playsinline
+              playsInline
               onEnded={handleVideoEnd}
               loop={videoSources.length === 1}
               width="100%"
               height="100%"
               config={{
                 youtube: {
-                  playerVars: { 
-                    controls: 0,
-                    showinfo: 0,
-                    modestbranding: 1,
-                    rel: 0,
-                    disablekb: 1,
-                    iv_load_policy: 3
-                  }
+                  rel: 0,
+                  disablekb: 1,
+                  iv_load_policy: 3
                 }
               }}
             />
@@ -54,9 +49,9 @@ export function VideoBackground({ videoSources, overlayOpacity = 0.4 }: VideoBac
       </AnimatePresence>
 
       {/* Dynamic Overlay Layer */}
-      <div 
-        className="absolute inset-0 bg-black z-10" 
-        style={{ opacity: overlayOpacity }} 
+      <div
+        className="absolute inset-0 bg-black z-10"
+        style={{ opacity: overlayOpacity }}
       />
 
       {/* Gradients for Text Focus */}
