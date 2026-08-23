@@ -15,12 +15,12 @@ export const FOOT_LINKS = [
 ] as const;
 
 export const videoPlaylist = [
-  "https://res.cloudinary.com/dc811ugno/video/upload/v1773441174/modus_focus_featured_video_qxi8a6.mp4",
-  "https://res.cloudinary.com/dc811ugno/video/upload/v1773441173/Modus_focus_featured_8_ghjnm7.mp4",
-  "https://res.cloudinary.com/dc811ugno/video/upload/v1773441173/Modus_focus_featured_9_htgz3e.mp4",
-  "https://res.cloudinary.com/dc811ugno/video/upload/v1773441173/Modus_focus_featured_7_arfqsg.mp4",
-  "https://res.cloudinary.com/dc811ugno/video/upload/v1773441169/Modus_focus_featured_5_xw2bft.mp4",
-  "https://res.cloudinary.com/dc811ugno/video/upload/v1773441168/Modus_focus_featured_10_dzg8ds.mp4"
+  "https://youtu.be/NdWMY3nHs3Q?si=Ra4mdCqqml2O_VdO",
+  "https://youtu.be/P4UH4IHuXRg?si=bk6c-8uswtQciLtv",
+  "https://youtu.be/ZHkzRicxe2A?si=cpfDYrFl58RsQ5ss",
+  "https://youtu.be/0qB-e0zgNhI?si=aN4LsimKVNgqrSTY",
+  "https://youtu.be/UMjTVTJ2c4Y?si=dC9XD0kO3tOgDXLE",
+  "https://youtu.be/KHTKHy0DvYI?si=KALTo7xfKOkH24Gp"
 
 ];
 
