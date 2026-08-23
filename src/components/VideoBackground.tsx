@@ -1,6 +1,7 @@
 // src/components/VideoBackground.tsx
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
+import ReactPlayer from "react-player";
 
 interface VideoBackgroundProps {
   videoSources: string[];
@@ -25,17 +26,30 @@ export function VideoBackground({ videoSources, overlayOpacity = 0.4 }: VideoBac
           transition={{ duration: 1.5, ease: "easeInOut" }}
           className="absolute inset-0 w-full h-full"
         >
-          <video
-            autoPlay
-            muted
-            playsInline
-            onEnded={handleVideoEnd}
-            className="w-full h-full object-cover"
-            // Se houver apenas um vídeo, ativamos o loop nativo
-            loop={videoSources.length === 1}
-          >
-            <source src={videoSources[currentIndex]} type="video/mp4" />
-          </video>
+          <div className="absolute inset-0 w-full h-full scale-[1.3] md:scale-[1.1] origin-center">
+            <ReactPlayer
+              url={videoSources[currentIndex]}
+              playing
+              muted
+              playsinline
+              onEnded={handleVideoEnd}
+              loop={videoSources.length === 1}
+              width="100%"
+              height="100%"
+              config={{
+                youtube: {
+                  playerVars: { 
+                    controls: 0,
+                    showinfo: 0,
+                    modestbranding: 1,
+                    rel: 0,
+                    disablekb: 1,
+                    iv_load_policy: 3
+                  }
+                }
+              }}
+            />
+          </div>
         </motion.div>
       </AnimatePresence>
 
